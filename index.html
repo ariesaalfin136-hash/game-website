@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Math Adventure SMA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- LINK KE CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 🔊 AUDIO -->
+  <audio id="bgMusic" src="https://cdn.pixabay.com/audio/2022/03/15/audio_9c6e8d68a6.mp3" loop></audio>
+  <audio id="correctSound" src="https://cdn.pixabay.com/audio/2022/03/10/audio_2c9c8b6d1a.mp3"></audio>
+  <audio id="wrongSound" src="https://cdn.pixabay.com/audio/2022/03/10/audio_4a3c7c7a9f.mp3"></audio>
+
+  <!-- 🏠 MENU AWAL -->
+  <div id="menu" class="screen active">
+    <h1>🎮 Math Adventure SMA</h1>
+    <p>Game Edukasi Matematika Tingkat SMA</p>
+    <button onclick="startGame()">▶ Mulai Game</button>
+    <button onclick="toggleFullscreen()">📱 Fullscreen</button>
+  </div>
+
+  <!-- 🎯 GAME -->
+  <div id="game" class="screen">
+    <div class="top">
+      <span id="score">Skor: 0</span>
+      <span id="timer">⏱️ 30</span>
+    </div>
+
+    <h2 id="question">Soal</h2>
+    <div id="answers" class="answers"></div>
+  </div>
+
+  <!-- 🏆 GAME OVER -->
+  <div id="gameOver" class="screen">
+    <h1>🏆 Game Over</h1>
+    <p id="finalScore">Skor Akhir: 0</p>
+    <button onclick="restartGame()">🔄 Main Lagi</button>
+  </div>
+
+  <!-- LINK KE JAVASCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
